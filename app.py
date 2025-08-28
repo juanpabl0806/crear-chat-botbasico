@@ -14,7 +14,7 @@ def get_secret(key, default=None):
         return st.secrets[key]
     return os.environ.get(key, default)
 
-API_KEY = get_secret("sk-53751d5c6f344a5dbc0571de9f51313e")
+API_KEY = get_secret("DEEPSEEK_API_KEY")
 MODEL = get_secret("MODEL", "deepseek-chat")
 SYSTEM_PROMPT = get_secret(
     "SYSTEM_PROMPT",
