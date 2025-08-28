@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ===== CONFIGURACIÓN =====
-API_URL = "https://api.deepseek.com/v1"
+API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 def get_secret(key, default=None):
     if st.secrets and key in st.secrets:
