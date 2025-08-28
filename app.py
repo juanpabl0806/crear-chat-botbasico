@@ -52,8 +52,8 @@ for msg in st.session_state.history:
     st.markdown(f"**{'Tú' if msg['role']=='user' else 'Bot'}:** {msg['content']}")
 
 # Entrada de usuario
-user_input = st.text_input("Escribe tu mensaje:", key="input")
-if st.button("Enviar") and user_input:
+user_input = st.chat_input("Escribe tu mensaje:")
+if user_input:
     st.session_state.history.append({"role": "user", "content": user_input})
     response = chat_with_deepseek(user_input)
     st.session_state.history.append({"role": "assistant", "content": response})
