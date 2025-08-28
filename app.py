@@ -57,9 +57,9 @@ if st.button("Enviar") and user_input:
     st.session_state.history.append({"role": "user", "content": user_input})
     response = chat_with_deepseek(user_input)
     st.session_state.history.append({"role": "assistant", "content": response})
-    st.experimental_rerun()
+   st.rerun()
 
 # Botón de reinicio
 if st.button("Reiniciar conversación"):
     st.session_state.history = [{"role": "system", "content": SYSTEM_PROMPT}]
-    st.experimental_rerun()
+    st.rerun()
